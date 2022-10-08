@@ -1,0 +1,8 @@
+whitespace = _{ " " | "\t" }
+word = { (!(whitespace | "(" | "<" | "[" | "{") ~ ANY)+ }
+round = { "(" ~ (round | (!")" ~ ANY))* ~ ")" }
+square = { "[" ~ (square | (!"]" ~ ANY))* ~ "]" }
+curly = { "{" ~ (curly | (!"}" ~ ANY))* ~ "}" }
+angle = { "<" ~ (angle | (!">" ~ ANY))* ~ ">" }
+brackets = _{ round | square | curly | angle }
+expr = { (word | brackets | whitespace)* }

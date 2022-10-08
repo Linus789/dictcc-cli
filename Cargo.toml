@@ -1,0 +1,25 @@
+[package]
+name = "dictcc-cli"
+version = "0.1.0"
+description = "Offline dictionary via dict.cc database"
+authors = ["Linus789"]
+readme = "README.md"
+repository = "https://github.com/Linus789/dictcc-cli"
+categories = ["command-line-utilities"]
+edition = "2021"
+rust-version = "1.63.0"
+
+[dependencies]
+clap = { version = "4.0.7", features = ["cargo", "derive", "string"] }
+thiserror = "1.0.37"
+rustyline = "10.0.0"
+csv = "1.1.6"
+unicode-normalization = "0.1.22"
+tantivy = "0.18.0"
+pest = "2.3.1"
+pest_derive = "2.3.1"
+html-escape = "0.2.11"
+dirs = "4.0.0"
+itertools = "0.10.5"
+strsim = "0.10.0"
+comfy-table = "6.1.0"
